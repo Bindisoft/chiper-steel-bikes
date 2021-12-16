@@ -16,7 +16,7 @@ export const getBikes = async (state:stateApp):Promise<stateApp> => {
   const allSuccess = resBikes.success && resCount.success;
   
   if (allSuccess && resCount.data?.proximity === 0) { 
-    return {...state, status: 'empty'}
+    return {...state, status: 'empty', page:1}
   }
 
   if (allSuccess) {
@@ -24,7 +24,8 @@ export const getBikes = async (state:stateApp):Promise<stateApp> => {
       ...state,
       status: 'idle',
       listBikes: resBikes.data,
-      count: resCount.data.proximity
+      count: resCount.data.proximity,
+      page:1
     }
   }
   
