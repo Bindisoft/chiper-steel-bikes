@@ -24,8 +24,7 @@ export const getBikes = async (state:stateApp):Promise<stateApp> => {
       ...state,
       status: 'idle',
       listBikes: resBikes.data,
-      count: resCount.data.proximity,
-      page:1
+      count: resCount.data.proximity
     }
   }
   
