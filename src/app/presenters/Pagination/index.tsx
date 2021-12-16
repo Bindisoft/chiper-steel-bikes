@@ -27,7 +27,7 @@ const Pagination = () => {
         disabled={p['first']}
         onClick={()=>onClickButton(1)}
         >
-        {'<< Firts'}
+        {'Firts'}
       </Button>
       <Button 
         size="medium" 
@@ -35,7 +35,7 @@ const Pagination = () => {
         disabled={p['prev']}
         onClick={()=>onClickButton(state.page-1)}
         >
-        {'< Prev'}
+        {'Prev'}
       </Button>
       <Button 
         size="medium" 
@@ -49,7 +49,7 @@ const Pagination = () => {
         disabled={p['next']}
         onClick={()=>onClickButton(state.page+1)}
         >  
-        {'Next >'}
+        {'Next'}
       </Button>
       <Button 
         size="medium"
@@ -57,7 +57,7 @@ const Pagination = () => {
         disabled={p['last']}
         onClick={()=>onClickButton(p['totalPages'])}
         >
-        {'Last >>'}
+        {'Last'}
       </Button>
     </Grid>
   );
